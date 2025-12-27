@@ -308,5 +308,8 @@ body.theme-dark .segment-group { background: var(--color-surface); }
 @media (min-width:601px){ .show-xs { display:none !important; } }
 
 /* Sticky action bar for forms on mobile */
-.form-actions-sticky { position:sticky; bottom:0; background:var(--color-bg-alt); padding:0.75rem 0; display:flex; justify-content:flex-end; gap:0.6rem; border-top:1px solid var(--color-border); backdrop-filter:blur(10px) saturate(140%); }
-@media (min-width:601px){ .form-actions-sticky { position:static; background:transparent; padding:0; border-top:none; backdrop-filter:none; } }
+.form-actions-sticky { position:sticky; bottom:0; background:var(--color-bg-alt); padding:0.75rem 0.9rem; display:flex; justify-content:space-between; gap:1.25rem; align-items:center; border-top:1px solid var(--color-border); backdrop-filter:blur(10px) saturate(140%); }
+.form-actions-sticky .btn { flex:1; min-width:0; padding:0.9rem 0.9rem; }
+/* Ensure visible spacing even on browsers that might not support flex gap well */
+.form-actions-sticky .btn + .btn { margin-left:0.6rem; }
+@media (min-width:601px){ .form-actions-sticky { position:static; background:transparent; padding:0; border-top:none; backdrop-filter:none; } .form-actions-sticky .btn { flex: initial; padding: initial; margin-left:0; } }
