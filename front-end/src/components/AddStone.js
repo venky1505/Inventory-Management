@@ -71,7 +71,7 @@ function AddStone() {
       <div className="card" style={{position:'relative', display:'grid', gap:'1rem'}}>
         <h2 style={{margin:0}}>Add New Stone</h2>
         <p className="text-muted" style={{margin:'0 0 0.5rem 0'}}>Quickly add a stone with minimal details.</p>
-        <form onSubmit={handleSubmit} className="grid" style={{gap:'1rem'}}>
+       <form id="addStoneForm" onSubmit={handleSubmit} className="grid" style={{gap:'1rem'}}>
           <div className="grid" style={{gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:'1rem'}}>
             <div className="field floating">
               <input id="stoneName" name="stoneName" value={formData.stoneName} onChange={handleInputChange} required placeholder=" " aria-required="true" />
